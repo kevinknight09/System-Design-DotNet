@@ -45,7 +45,7 @@ namespace ParkingLotDesign.BizLogic
 		{
 			foreach(var spot in ParkingSpots)
 			{
-				if(!spot.IsOccupied() && spot.GetParkedVehicle().GetLicensePlate()== licenseNumber)
+				if(spot.IsOccupied() && spot.GetParkedVehicle().GetLicensePlate()== licenseNumber)
 				{
 					spot.SetOccupied(false);
 					spot.SetParkedVehicle(null);
